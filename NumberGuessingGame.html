@@ -1,0 +1,68 @@
+<html> 
+<title>My first page</title>
+<body style ="background-color: #C8102E">
+<h1>516</h1>
+<p>Hello!</p>
+<script>
+
+
+
+// alert("Hello, world!")
+//name = prompt("What is your name?")
+//alert("Hello " + name + "!")
+
+//Code for printing hastags
+/*let counter = 0; 
+let stringToPrint = {};
+do 
+	{
+	console.log("#"); 
+	stringToPrint = stringToPrint + "#";
+	counter++;
+	}
+	while(counter<=6);*/
+	
+//Code for Task 1
+/*Task
+Create a web page with an embedded JavaScript program that plays the “number guessing game” with the user as follows:
+
+The user is asked to think of an integer between 1 and 100 (inclusive).
+The program needs to repeatedly take guesses at the number the user has in mind.
+To each of the program’s guesses, the user responds “<” if the target number is less than the program’s guess; “>” if the target number is greater than the program’s guess; or “yes” if the program has guessed the number correctly.
+You need to come up with and implement the most efficient strategy for your program.
+
+Sample game
+Your program (prompt box): Is your number 23?
+User (enters into the prompt box): <
+Your program: Is your number 1?
+User: >
+Your program (prompt box): Is your number 14?
+User (enters into the prompt box): yes
+Your program (alert box): I won!*/
+alert("Think of an integer between 1 and 100")
+maxNo=100
+minNo = 50
+number = maxNo/2;
+do {
+	sign = prompt(" If your number is " + number ", type yes" + "If less than" + number "type < or If greater than" + number "type >")
+	if  (sign == "<"){
+	   maxNo = minNo
+	   number=maxNo/2;}
+	else (Sign == ">"){
+	    
+		number=maxNo/2;}
+	}   
+while (sign!="yes")
+alert("I won!);
+
+
+
+
+	
+	
+	
+	
+</script>
+</body>
+</html> 
+
