@@ -1,0 +1,18 @@
+<script>
+width = prompt("please enter a number for width");
+ height=prompt("please enter a number for height");
+ let boardPattern ="";
+ for(i=0;i<width;i++){
+   //console.log("i=" + i);
+   for(j=0;j<height;j++){
+     //console.log( "j=" + j);
+     if((i+j)%2==0)
+     	boardPattern +=  " ";
+     else
+      	boardPattern += "#";
+     
+   }
+   boardPattern += "\n";
+ }
+console.log(boardPattern);
+</script>
