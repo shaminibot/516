@@ -9,16 +9,16 @@ alert("Think of an integer between 1 and 100");
  minNo=1;
 
 do{
-number=Math.floor((minNo+maxNo)/2);
+number=Math.floor((minNo+maxNo)/2);//Checked google how to do integer divisions
 userResponse=prompt("If your no is "+ number + " enter Yes if less than enter < or else enter >");
 if(userResponse=="<")
   maxNo=number;
 else if (userResponse==">")
          minNo=number;
-}while (userResponse!="Yes");
+//number=Math.floor((maxNo+minNo)/2);
+}while (userResponse.toUpperCase()!="YES");//Checked google how to convert String to Uppercase
 alert("I won!");
 
-	
 </script>
 </body>
 </html> 
