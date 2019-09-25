@@ -3,19 +3,36 @@
 <h1>516</h1>
 <script>
 
-alert("Think of an integer between 1 and 100");
+//alert("Think of an integer between 1 and 100");// No alert boxes without 
+let userResponse = " ";
+console.log(userResponse);
 maxNo=100;
 minNo=1;
 
-do{
+/*do{
   number=Math.floor((minNo+maxNo)/2);//Checked google how to do integer divisions so that the resultant number is not a decimal.
-  userResponse=prompt("If your no is "+ number + " enter Yes, if it is less enter < or else enter  >");
+  userResponse=prompt("If your number is "+ number + " enter Yes, if it is less enter < or else enter  >");
   if(userResponse=="<")
     maxNo=number;
   else if (userResponse==">")
-         minNo=number;
+    minNo=number;
 }while (userResponse.toUpperCase()!="YES");//Checked google how to convert String to Uppercase
 alert("I won!");
+*/
+number=Math.floor((minNo+maxNo)/2);//Checked google how to do integer divisions so that the resultant number is not a decimal.
+
+while(userResponse.toUpperCase()!="YES"){
+  
+  userResponse=prompt("If your number is "+ number + " enter Yes, if it is less enter < or else enter  >");
+  if(userResponse=="<")
+    maxNo=number;
+  else if (userResponse==">")
+    minNo=number;
+    number=Math.floor((minNo+maxNo)/2);
+}//Checked google how to convert String to Uppercase
+alert("I won!");
+
+
 
 </script>
 </body>
