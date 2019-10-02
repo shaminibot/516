@@ -1,6 +1,5 @@
 <html> 
 <title>Number Guessing Game</title>
-<h1>516</h1>
 <script>
 
 let userResponse = " ";
@@ -10,10 +9,10 @@ minNo=1;
 //Checked google how to convert String to Uppercase
 while(userResponse.toUpperCase()!="YES"){
   number=Math.floor((minNo+maxNo)/2);
-  userResponse=prompt("If your number is "+ number);
-  if(userResponse=="<")
+  userResponse=prompt("If your number is "+ number + "?");
+  if(userResponse == "<")
     maxNo=number;
-  else if (userResponse==">")
+  else if (userResponse == ">")
          minNo=number;
     
 }
