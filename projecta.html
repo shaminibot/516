@@ -1,0 +1,27 @@
+<html> 
+<title>Number Guessing Game</title>
+<h1>516</h1>
+<script>
+
+let userResponse = " ";
+maxNo=100;
+minNo=1;
+//Checked google how to do integer divisions so that the resultant number is not a decimal.
+//Checked google how to convert String to Uppercase
+while(userResponse.toUpperCase()!="YES"){
+  number=Math.floor((minNo+maxNo)/2);
+  userResponse=prompt("If your number is "+ number);
+  if(userResponse=="<")
+    maxNo=number;
+  else if (userResponse==">")
+         minNo=number;
+    
+}
+alert("I won!");
+
+
+
+</script>
+</body>
+</html> 
+
