@@ -17,34 +17,27 @@ const wrapLow = function(code){
     else if(code >= 122)
     	   code -= 26;
     return code;
-
-
 }
 let shiftInt = parseInt(prompt("Enter shift"));
- if (Math.abs(shiftInt) > 26) //Math.abs() to convert to an absolute value - searched google
-    shiftInt = shiftInt % 26;//Jamie's logic to narrow down the input to a certain range
+if (Math.abs(shiftInt) > 26) //Math.abs() to convert to an absolute value - searched google
+  shiftInt = shiftInt % 26;//Jamie's logic to narrow down the input to a certain range
 let userString = prompt("Enter text");
 let i;
 let newString = "";
 for(i=0;i<userString.length;i++){
   let charToEncrypt = userString[i];
-  
-  
   let code = charToEncrypt.charCodeAt(0); // Learned in class char.CodeAt(0) gets the ASCII code of the first item in the string.
- 
+  if(code >= 65 && code <= 90){
+    code += shiftInt;
+    code = wrapCap(code);
     
-    if(code >= 65 && code <= 90){
-      code += shiftInt;
-      code = wrapCap(code);
+ }
+if(code >= 97 && code <= 122){
+  code += shiftInt;
+  code = wrapLow(code);
     
-     }
-    if(code >= 97 && code <= 122){
-      code += shiftInt;
-      code = wrapLow(code);
-    
-    }
-    newString += String.fromCharCode(code);//Learned in class how to convert Ascii code to characters. 
-
+ }
+newString += String.fromCharCode(code);//Learned in class how to convert Ascii code to characters. 
 
 }
 alert(newString);
