@@ -1,0 +1,30 @@
+<html>
+<script>
+let students ={"shamini" : [1,100,75], "Mowgli": [95,30,45], "hpotter": [135,3,1]};
+
+for (let i in students)
+   if (students[i] <90){
+   
+     alert("Student " + i + "failed");
+    
+   }
+   
+for(let j in students){
+	 let average = calculateAverage(students[j]);
+     alert(average);
+}
+function calculateAverage(arr){
+    let count=0;
+    let i=0;
+	for (i=0; i<arr.length; i++) 
+	  count=count + arr[i];
+    let avg= count/i;
+    return avg;
+}
+
+ 
+   
+
+</script>
+
+</html>

@@ -9,12 +9,12 @@ minNo=1;
 //Checked google how to do integer divisions so that the resultant number is not a decimal.
 //Checked google how to convert String to Uppercase
 while(userResponse.toUpperCase()!="YES"){
-  number=Math.floor((minNo+maxNo)/2);
+  number=Math.round((minNo+maxNo)/2);
   userResponse=prompt("If your number is "+ number);
   if(userResponse=="<")
     maxNo=number;
-  else if (userResponse==">")
-         minNo=number;
+  if(userResponse==">")
+    minNo=number;
     
 }
 alert("I won!");
