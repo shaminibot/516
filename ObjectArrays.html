@@ -1,0 +1,42 @@
+<html>
+<script>
+'use strict';
+
+const checkMin = function(modelObj){
+    let minprep = "in";
+	for (let p in modelObj){
+      if (modelObj[minprep]>modelObj[p])
+	    minprep=p;
+     }
+     return minprep;
+
+}
+
+const checkMastery = function(itemBank,model){
+	let minprep=checkMin(model);
+	let number = Math.floor(Math.random() * itemBank[minprep].length);
+	if(prompt(itemBank[minprep][number])==minprep){
+      alert("Correct");
+      model[minprep]++;
+    }
+    else {
+      alert(itemBank[minprep][number].replace("___", minprep));//Checked online to see how to replace certain elements in strings with other characters and found this function on W3Schools.com
+      model[minprep]--;
+    }
+    
+    checkMastery(itemBank, model);
+}
+
+
+const itemBank = {
+  "in": ["The lecture is ___ room 21.", "There is a table ___ the room.", "The new semester will start ___ January.", "There is some milk ___ the fridge.","The train will arrive ___ two hours."],
+  "before":["She wakes up ___ sunrise.", "Sunday comes ___ Monday.", "I'll study ___ the exam.", "We will finish the project ___ the teacher comes to class.", "The case was presented ___ the jury."],
+  "on": ["The plate is ___ the table.", "The computer is ___ the desk.", "The pillow is ___ the bed.", "He sat ___ the chair.","The garbage truck comes ___ Wednesday."],
+   "under": ["The shoes are ___ the bed.", "You are ___ arrest.", "The feather is ___ the cap.", "The boy was hiding ___ the table.", "The trash can is ___ the sink."],
+   "between": ["Put your head down ___ your knees.", "Don't let it come ___ us.", "There is a wide gap ___ the teeth.", "There is a mountain ___ the ocean and the river."]
+};
+let model = { "in": 0, "before": 0, "on": 0, "under": 0, "between": 0};
+checkMastery(itemBank, model);
+
+</script>
+</html>

@@ -1,10 +1,11 @@
 <html>
 <script>
 
-const wrapCap = function(code){
-  if (code <= 65)
+const wrapCap = function(code, upperValue, lowValue){
+ 
+  if (code <= upperValue)
     code += 26;
-  else if(code >= 90)
+  else if(code >= lowValue)
          code -= 26;
   return code;
      
@@ -30,25 +31,29 @@ for(i=0;i<userString.length; i++){
   
   
   let code = charToEncrypt.charCodeAt(0); // Learned in class char.CodeAt(0) gets the ASCII code of the first item in the string.
- 
-    
-    if(code >= 65 && code <= 90){
+   if(code >= upperValue && code <= lowValue)
       code += shiftInt;
-      code = wrapCap(code);
+   
+   if(code >= 65 && code <= 90){
+      code += shiftInt;
+      code = wrapCap(code, 65, 90);
+    }
+     
       //if(code <= 65)
     	//code += 26;
       //else if(code >= 90)
     		// code -= 26;
-     }
+     
     if(code >= 97 && code <= 122){
       code += shiftInt;
       code = wrapLow(code);
+    }
       //if(code <= 97)
     	//code += 26;
      // else if(code >= 122)
     	     //code -= 26;
     
-    }
+    
     newString += String.fromCharCode(code);//Learned in class how to convert Ascii code to characters. 
 
 

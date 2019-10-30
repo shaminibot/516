@@ -1,0 +1,55 @@
+<html>
+
+<script>
+
+//item bank (const), use object with prepositions as keys and sentences as arrays.
+//learner model (let), 
+
+
+const questions = {
+  "from": ["He comes ____ Tanzania.", "Your birthday present is ____ me.", "Babies do not know right ____ wrong.", "The party will be ____ dusk until dawn.", "The kraken struck the ship ____ the depths of the sea."],
+  "for": ["Thank you ____ your kindness.", "If you are not ____ us, then you are against us.", "This gift is ____ you.", "Our work is done ____ today.", "It is time ____ dinner."],
+  "in": ["Get ____ the car.", "You are ____ so much trouble!", "Please look ____ my purse and find my checkbook.", "Be sure to see the sights while you are ____ Seattle.", "This too will pass ____ time."],
+  "of": ["He is made ____ sterner stuff than I.", "You are ____ no use to me.", "Magic mirror on the wall, who is the fairest one ____ all?", "She reigned as the queen ____ her country for almost fifty years.", "They are two ____ a kind."],
+  "by": ["I walked ____ the monument every day on my way to school.", "Stand ____ me.", "The library is ____ City Hall.", "This discussion is not over ____ the way.", "I will have made dinner ____ the time you arrive."]
+}
+let model = {"from": 0, "for": 0, "in": 0, "of": 0, "by": 0};
+let lv = model.by;
+let prep = "by";
+let stem = "";
+while(true) {
+  for (let cp in model) {
+    if (model[cp] < lv) {
+      lv = model[cp];
+		prep = cp;
+	}
+  }
+    //let number = Math.floor(Math.random() * itemBank[minprep].length);
+    //stem = questions[prep][Math.floor(Math.random()*5)];
+        stem = Math.floor(Math.random()*5);
+	//let task = prompt(stem);
+	  if (prompt(questions[prep][stem]) == prep) {
+	    model[prep]++;
+	    alert("Correct!");
+	  }
+	  else {
+	    alert("Not Correct");
+	    model[prep]--;
+	    //let str = questions[prep][stem];
+	   // alert(str);
+	   alert(questions[prep][stem].replace(/____/, prep));
+	  }
+	
+  
+  }
+  //determine mastery of preposition
+  //pick sentence from bank associated with preposition (use Math.random())  math.floor(math.random*5)
+  //Show sentence to learner and obtain response
+  //If correct, show correct and add 1, if incorrect show sentence and subtract 1
+  //where.replace(what,replace)
+
+
+
+</script>
+
+</html>

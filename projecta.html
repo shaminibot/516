@@ -3,17 +3,17 @@
 <script>
 
 let userResponse = " ";
-maxNo=100;
-minNo=1;
+let maxNo=100;
+let minNo=1;
 //Checked google how to do integer divisions so that the resultant number is not a decimal.
 //Checked google how to convert String to Uppercase
 while(userResponse.toUpperCase()!="YES"){
-  number=Math.floor((minNo+maxNo)/2);
+  let number=Math.floor((minNo+maxNo)/2);
   userResponse=prompt("Is your number "+ number + "?");
   if(userResponse == "<")
-    maxNo=number;
+    maxNo=number-1;
   else if (userResponse == ">")
-         minNo=number;
+         minNo=number+1;
     
 }
 alert("I won!");
