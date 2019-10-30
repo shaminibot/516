@@ -16,7 +16,7 @@ const checkMastery = function(itemBank,model){
 	let minprep=checkMin(model);
 	let number = Math.floor(Math.random() * itemBank[minprep].length);
 	if(prompt(itemBank[minprep][number])==minprep){
-      alert("Correct");
+      alert("Correct!");
       model[minprep]++;
     }
     else {
