@@ -1,0 +1,22 @@
+<html>
+<script>
+
+let myRe = /d(b+)d/g;
+let myArray = myRe.exec('cdbbdbsbz');
+alert(myArray);
+//dbbd,bb
+alert(myRe.lastIndex);
+
+
+//Now practice names 
+let re = /(\w+)\s(\w+)/;
+let str = 'John Smith';
+let newstr = str.replace(re, '$2, $1');
+alert(newstr);
+
+//Smith, John
+</script>
+
+
+
+</html>

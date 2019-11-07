@@ -1,0 +1,16 @@
+<script>
+let input = prompt("Enter string");
+input =input.replace(/\ban?\b/g,"the");
+input = input.replace(/\bAn?\b/g, "The");
+alert(input);
+</script>
+
+/*
+g Flag or global Flag  is something like find and replace all 
+\ban?\b
+the
+]bAn?\b
+The
+*/
+
+</script>
