@@ -3,7 +3,7 @@
 let input = prompt("Enter your text");
 input = input.replace(/([aeiouy]+[^aeiouy\s]+)(e)\b/gi,"$1#");
 input = input.replace(/[aeiouy]+/gi,"aig$&");    
-input=input.replace(/#/g,"e");
+input=input.replace(/#/gi,"e");
 alert(input);
 
 </script>
