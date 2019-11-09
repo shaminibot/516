@@ -1,0 +1,20 @@
+                   A Treasure of Wisdom Words
+
+   The project idea is to create a vocabulary-based application that will be useful for
+learners interested in enriching their experience in learning new words and elevating 
+their language learning experience. The motivation for the project stems from the idea 
+that when some language learners come across new or interesting words while they are 
+reading some texts, they may want to note those words to use them later in spoken or 
+written forms. When they gather these words or phrases in a traditional notebook,
+it may  not always be easy to glean them when needed, due to the organizational format. 
+Nevertheless, when these words are stored in an electronic form by scanning the text and
+then storing the words in an alphabetized order, they can be easily accessed later using a 
+simple search function. Additionally, using traditional means, when readers take time to
+note down an interesting word or a phrase, they may get distracted and potentially lose
+their enthusiasm in what they were currently reading. The affordance of this application
+will mitigate the aforementioned challenge by allowing the user to tag the word/phrase 
+in the text. Later, when the user/learner is ready to research the word, they will be
+connected to an online dictionary which will allow them to research the word in context
+for its semantic and lexical information, and they can then store it by copying and
+pasting it in their personal electronic vocabulary lexicon, thus creating a list of 
+words, they could treasure forever. 
