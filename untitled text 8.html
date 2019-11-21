@@ -1,0 +1,43 @@
+<html>
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+<script>
+
+function process() {
+
+	let userString = document.getElementById("input").value;
+    userString = userString.replace(/[\W]+/gi," ");
+	userString = userString.replace(/\s{2,}/g, " ");
+	userString = userString.toUpperCase();
+	let tokens = userString.split(" "); //learned in class
+	let types = [...new Set(tokens)]; // array with unique tokens only -- learned from Reza 
+	let dictionary = {};
+	
+	for (i = 0; i < types.length; i++) { 
+	  count = 0;
+      for (j = 0; j < tokens.length; j++) { 
+        if (types[i] == tokens[j]) {  
+          count++;
+        }
+      }
+      dictionary[types[i]] = count; 
+     
+    }
+    
+    
+	let finalList = Object.keys(dictionary).sort(function(value1,value2) {//had difficulty on this one - how to pass the whole object to sort? so got it from the internet
+      return dictionary[value2] - dictionary[value1];
+    });
+
+ 
+    let outputString = "";
+    for (let i = 0; i < finalList.length; i++){
+      outputString += finalList[i] + " " + dictionary[finalList[i]] + "\n";
+    }
+    document.getElementById("output").value = "Type" + " " + "Frequency" + "\n" + outputString + "Type/Token ratio:" + " " + types.length/tokens.length;
+ 
+}   
+
+</script>
+</html>
